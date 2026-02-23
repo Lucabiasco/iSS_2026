@@ -240,32 +240,32 @@ div.imagedesc{
 <div class="body"> 
 <h2>Introduction</h2>
 <div class="remark">
-Costruzione di un sistema software per la riproduzione dell'automa cellulare di John Horton Conway, il Game of Life
+	Il progetto consiste nella realizzazione di un automa cellulare basato sul Game of Life di John Conway. <br>
+	Si tratta di un sistema deterministico a zero giocatori (se non si considera l'utente che inserisce la configurazione iniziale) <br>
+	L'evoluzione della griglia dipende esclusivamente dallo stato iniziale. <br>
 </div>
  
 <h2>Requirements</h2>
 <div class="remark">
-Il mondo e' una griglia bidimensionale teoricamente infinita, visibile<br>
-Ogni cella teoricamente ha 8 vicini<br>
-Ogni cella si puo' trovare in due stati: viva o morta<br>
-Ad ogni generazione o Epoch si applicano 4 regole:<br>
-Regola 1 (Spopolamento): Una cella viva con meno di 2 vicini vivi muore.<br>
-Regola 2 (Sopravvivenza): Una cella viva con 2 o 3 vicini vivi sopravvive.<br>
-Regola 3 (Sovrappopolamento): Una cella viva con piu' di 3 vicini vivi muore.<br>
-Regola 4 (Riproduzione): Una cella morta con esattamente 3 vicini vivi diventa viva.<br>
+	Il sistema deve rispettare le seguenti regole su una griglia bidimensionale: <br>
+	Regola 1 (Spopolamento): Una cella viva con meno di 2 vicini vivi muore.<br>
+	Regola 2 (Sopravvivenza): Una cella viva con 2 o 3 vicini vivi sopravvive.<br>
+	Regola 3 (Sovrappopolamento): Una cella viva con piu' di 3 vicini vivi muore.<br>
+	Regola 4 (Riproduzione): Una cella morta con esattamente 3 vicini vivi diventa viva.<br>
 </div>
-
- 
 
 <h2>Requirement analysis</h2>
 <div class="remark">
-	La griglia e' di dimensioni finite<br>
-	Ogni cella puo' avere 3, 5, 8 vicini<br>
-	Ad ogni Epoch o generazione la griglia deve essere aggiornata automaticamente<br>
-	L'utente deve poter inserire una configurazione iniziale<br>
+	La griglia deve essere una matrice finita di dimensioni NxM. <br>
+	Si assume un comportamento con bordi morti (ovvero, le celle al di fuori della matrice sono considerate sempre morte). <br>
+	Il passaggio da una generazione t alla generazione t+1 deve essere atomico: lo stato di ogni cella al tempo t+1 dipende unicamente dallo stato della griglia al tempo t<br>
+	L'utente deve poter configurare la griglia iniziale, avviare/fermare la simulazione e resettare lo stato <br>
 </div>
 <h2>Problem analysis</h2>
- 
+ <div class="remark">
+	Non è possibile aggiornare la griglia in place. Se cambiamo lo stato di una cella, questo potrebbe influenzare erroneamente il calcolo dello stato delle celle vicine. <br>
+	(Dovremo usare una doppia matrice, una con stato attuale e una con stato futuro)<br> 
+</div> 
 
 <h2>Test plans</h2>
 <div class="remark">
@@ -274,16 +274,25 @@ Regola 4 (Riproduzione): Una cella morta con esattamente 3 vicini vivi diventa v
 
 
 <h2>Project</h2> 
- 
- 
+<div class="remark">
+	Pattern MVC: Model per la logica del gioco, View per la visualizzazione della griglia, Controller per gestire l'interazione con l'utente. <br> 
+</div> 
 
 <h2>Testing</h2> 
- 
+<div class="remark">
+	Implementazione di test con JUnit
+</div> 
 
 <h2>Deployment</h2> 
-
+<div class="remark">
+	Il sistema verrà distribuito come file JAR eseguibile
+</div> 
  
 <h2>Maintenance</h2> 
+<div class="remark">
+	Eventuali estensioni future: <br>
+	- Griglia toroidale
+</div> 
  
 <!-- USEFUL
 <table style="width:100%" border="1">
