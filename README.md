@@ -9,3 +9,7 @@ Laboratorio di <b>Ingegneria dei Sistemi Software</b> a.a 2025/2026 di Biasco Lu
    in Java con dispositivi Mock di I/O. <i>Distribuzione</i>: file jar.
  * [ConwayLife Sprint2](ConwayLife/Sprint2/conway26Java): <b>evoluzione</b> del primo prototipo
    con un dispositivo di output realizzato in Swing. <i>Distribuzione</i>: file jar
+
+### Da una funzione a un servizio: Javalin 6
+[Riferimento: Da una funzione a un servizio](https://anatali.github.io/issLab2026/_static/docs/Protobook.pdf#chapter.7)
+ * [AService Sprint1](AService/Sprint1/SistemaSJavalin): impostazione di un primo prototipo in java per il calcolo della funzione sin(x) + (sqrt(3) * x).
