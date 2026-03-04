@@ -1,6 +1,6 @@
 # iSSLab2026
 Laboratorio di <b>Ingegneria dei Sistemi Software</b> a.a 2025/2026 di Biasco Luca 0001223352
-[Testo di riferimento]((https://anatali.github.io/issLab2026/_static/docs/Protobook.pdf))
+[Testo di riferimento](https://anatali.github.io/issLab2026/_static/docs/Protobook.pdf)
 [Index](https://lucabiasco.github.io/iSS_2026/)
 
 ### Sistema ConwayLife in locale
